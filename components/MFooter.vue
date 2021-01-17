@@ -1,18 +1,21 @@
 <template>
   <footer :class="{ centered }">
     <span>
-      Modrinth is open source software. You may view the source code at
-      <a target="_blank" href="https://github.com/modrinth">our GitHub page</a>.
+      {{ $t('footer_text') }}
+      <a target="_blank" href="https://github.com/modrinth">{{
+        $t('github_page')
+      }}</a
+      >.
     </span>
     <ul>
       <li>
-        <nuxt-link to="/legal/terms">Terms</nuxt-link>
+        <nuxt-link to="/legal/terms">{{ $t('terms') }}</nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/legal/privacy">Privacy</nuxt-link>
+        <nuxt-link to="/legal/privacy">{{ $t('privacy') }}</nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/about">About</nuxt-link>
+        <nuxt-link to="/about">{{ $t('about') }}</nuxt-link>
       </li>
     </ul>
     <ul>

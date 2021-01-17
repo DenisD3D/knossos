@@ -143,6 +143,7 @@ export default {
   data() {
     return {
       isDropdownOpen: false,
+      isLangDropdownOpen: false,
     }
   },
   computed: {
@@ -165,6 +166,12 @@ export default {
     },
     hideDropdown() {
       this.isDropdownOpen = false
+    },
+    toggleLangDropdown() {
+      this.isLangDropdownOpen = !this.isLangDropdownOpen
+    },
+    hideLangDropdown() {
+      this.isLangDropdownOpen = false
     },
     logout() {
       this.$auth.setToken('local', false)

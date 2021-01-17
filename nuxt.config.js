@@ -126,6 +126,7 @@ export default {
     '@nuxtjs/sitemap',
     'nuxt-clipboard2',
     '@nuxtjs/style-resources',
+    'nuxt-i18n',
   ],
   robots: {
     Sitemap: 'https://modrinth.com/sitemap.xml',
@@ -182,5 +183,20 @@ export default {
   loading: {
     color: 'green',
     height: '5px',
+  },
+  i18n: {
+    locales: [
+      {
+        code: 'en',
+        file: 'en-US.js',
+      },
+      {
+        code: 'fr',
+        file: 'fr-FR.js',
+      },
+    ],
+    lazy: true,
+    langDir: 'lang/',
+    defaultLocale: 'en',
   },
 }

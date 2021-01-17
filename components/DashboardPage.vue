@@ -5,11 +5,11 @@
         <div class="card page-nav">
           <nuxt-link :to="'/dashboard/projects'" class="tab last">
             <ModIcon />
-            My mods
+            {{ $t('my_mods') }}
           </nuxt-link>
           <nuxt-link :to="'/dashboard/notifications'" class="tab last">
             <NotificationsIcon />
-            Notifications
+            {{ $t('notifications') }}
           </nuxt-link>
           <nuxt-link
             v-if="
@@ -19,11 +19,11 @@
             class="tab last"
           >
             <ModerationIcon />
-            Moderation
+            {{ $t('moderation') }}
           </nuxt-link>
           <nuxt-link :to="'/dashboard/settings'" class="tab last">
             <SettingsIcon />
-            Settings
+            {{ $t('settings') }}
           </nuxt-link>
         </div>
         <client-only>

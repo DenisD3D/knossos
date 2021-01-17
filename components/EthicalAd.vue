@@ -9,10 +9,7 @@
       data-ea-manual="true"
     />
     <div v-else class="alt">
-      <p>
-        A privacy-focused ad used to fund this site would've been here. Please
-        disable your content blocker to support Modrinth and it's authors.
-      </p>
+      <p>{{ $t('ethical_ad_alt') }}</p>
     </div>
   </div>
 </template>
@@ -41,9 +38,8 @@ export default {
       if (typeof ethicalads === 'undefined') {
         this.$notify({
           group: 'ads',
-          title: 'Please disable your Content Blocker',
-          text:
-            'Modrinth uses privacy-focused ads, from EthicalAds. Ads are the only way that our site is able to pay modders and support itself. Our ads are non-intrusive and minimal, and we only have one per page. We can assure you that none of your data is sold or used for tracking purposes.',
+          title: this.$t('ethical_ad_notify_title'),
+          text: this.$t('ethical_ad_notify_text'),
           type: 'error',
         })
         this.showAlt = true
